@@ -1,0 +1,16 @@
+@for $i from 0 through 30{
+    //margin classes
+    $margin:(m-#{$i}:($i + px));
+    @each $key, $value in $margin{
+        .#{$key}{
+        margin:$value;
+        }
+    }
+    //padding classes
+    $padding:(p-#{$i}:($i + px));
+    @each $key, $value in $padding{
+        .#{$key}{
+        padding:$value;
+        }
+    }
+}

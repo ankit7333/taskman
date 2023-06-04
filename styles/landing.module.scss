@@ -1,0 +1,366 @@
+@use 'index.scss' as *;
+// section 1
+.hero{
+    height:100%;
+    @include for-ipad{
+        height:auto;
+        padding-bottom:35rem;
+    }
+}
+.block{
+    margin-top:5rem;
+    width:70rem;
+    @include for-mobile{
+        display:flex;
+        flex-direction:column;
+    }
+}
+.title{
+    color:$primary-color;
+    font-family:$rubik;
+    font-size:7.5rem;
+    @include for-mobile{
+        text-align:center;
+    }
+    &__section{
+        font-size:5rem;
+    }
+}
+.paragraph{
+    color:$secondary-color;
+    font-size:2rem;
+    margin-top:4rem;
+    line-height:3rem;
+    @include for-mobile{
+        text-align:center;
+        font-size:2.6rem;
+        line-height:normal;
+        color:$primary-color;
+    }
+    &__animation{
+        @include fadeUp;
+    }
+}
+.form__custom{
+    display:flex;
+    align-items:stretch;
+    justify-content:space-between;
+    height:7.7rem;
+    margin:6rem 0 21.0rem;
+    :global(.button__primary){
+        flex:0 0 20.3rem;
+        width:20.3rem;
+    }
+}
+.cartoonnetworklogo{
+    width:9.7rem;
+    height:5.8rem;
+}
+.bookinglogo{
+    width:26.2rem;
+    height:4.3rem;
+}
+.dropboxlogo{
+    width:22.92rem;
+    height:4.5rem;
+}
+.toshiba{
+    width:20.7rem;
+    height:3.1rem;
+}
+.slacklogo{
+    width:15.5rem;
+    height:4.6rem;
+}
+.netflixlogo{
+    width:14.2rem;
+    height:3.8rem;
+}
+.spofitylogo{
+    width:18.8rem;
+    height:5.6rem;
+}
+.cocacolalogo{
+    width:15.7rem;
+    height:5.1rem;
+}
+.redbulllogo{
+    width:12.2rem;
+    height:7.4rem;
+}
+.logowrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5rem;
+    > li{
+        flex:1 1 auto;
+        filter:grayscale(100%);
+        opacity:0.4;
+        position:relative;
+        @include transition(all .5s ease-in-out);
+        &:hover{
+            filter:initial;
+            opacity:1;
+        }
+        a{display:inline-block}
+    }
+}
+.color{
+    width:150rem;
+    height:150rem;
+    @include position(absolute, $right:0);
+    z-index:-1;
+}
+.blue{
+    background-image:url('../public/images/Hero_Shapes_1.svg');
+    @include slideLeftTopBlue;
+}
+.yellow{
+    background-image:url('../public/images/Hero_Shapes_2.svg');
+    @include slideLeftTopYellow;
+}
+.black{
+    background-image:url('../public/images/Hero_Shapes_3.svg');
+    @include slideLeftTopBlack;
+}
+.card{
+    @include position(absolute, $top:1rem, $right:3rem);
+    @include for-ipad{
+        right:-15rem;
+    }
+    @include for-mobile{
+        display:none;
+    }
+    &__1{
+        width:463px;
+        height:370px;
+        background-image:url('../public/images/Hero_Illustration_Card-1.svg');
+        @include position(absolute, $right:10rem, $top:10rem);
+        @include fadeIn;
+        // animation-duration:6s;
+        animation-delay:2.5s;
+        // animation-iteration-count:infinite;
+        // animation-fill-mode:forwards;
+        // animation-direction:alternate;
+    }
+    &__2{
+        width:463px;
+        height:370px;
+        background-image:url('../public/images/Hero_Illustration_Card-2.svg');
+        @include position(absolute, $right:10rem, $top:25rem);
+        @include rotate2;
+        // animation-duration:6s;
+        animation-delay:2s;
+        // animation-iteration-count:infinite;
+        // animation-fill-mode:forwards;
+        // animation-direction:alternate;
+    }
+    &__3{
+        width:487px;
+        height:584px;
+        background-image:url('../public/images/Hero_Illustration_Card-4.svg');
+        @include position(absolute, $right:-3rem, $top:25rem);
+        @include fadeUp;
+        // animation-duration:6s;
+        animation-delay:1.2s;
+        // animation-iteration-count:infinite;
+        // animation-fill-mode:forwards;
+        // animation-direction:alternate;
+    }
+    &__4{
+        width:465px;
+        height:332px;
+        background-image:url('../public/images/Hero_Illustration_Card-3.svg');
+        @include position(absolute, $right:30rem, $top:45rem);
+        @include rotate4;
+        // animation-duration:6s;
+        animation-delay:1s;
+        // animation-iteration-count:infinite;
+        // animation-fill-mode:forwards;
+        // animation-direction:alternate;
+    }
+}
+// section 2
+.benefits{
+    &__wrap{
+        @include for-ipad{
+            height:100%;
+            padding:10rem 10%;
+        }
+        @include for-mobile{
+            height:100%;
+            padding:10rem 10%;
+        }
+    }
+    width:78.7rem;
+    text-align:center;
+    line-height:6rem;
+    @include for-mobile{
+        width:100%;
+    }
+    &__wrap{
+        text-align:center;
+        margin-top:10.2rem;
+        gap:0 20.8rem;
+        display:flex;
+        @include for-mobile{
+            gap:5rem;
+            flex-direction:column;
+            padding:0 5rem;
+        }
+        figure{
+            @for $i from 1 to 5 {
+                &:nth-child(#{$i}) {
+                    img{animation-delay:$i * .5s;}
+                    .img{
+                        &__title{animation-delay:$i * 1s;}
+                        &__subtitle{animation-delay:$i * 1.5s;}
+                    }
+                }
+            }
+            img{
+                width:10.6rem;
+                height:8.5rem;
+                @include fadeUp;
+                animation-delay:.2s;
+            }
+        }
+        figcaption{
+            display:flex;
+            flex-direction:column;
+        }
+    }
+}
+.img{
+    &__title{
+        font-size:2.5rem;
+        color:$primary-color;
+        font-family:$rubik;
+        font-weight:700;
+        margin:4.3rem 0 2rem;
+        @include fadeUp;
+    }
+    &__subtitle{
+        font-size:1.6rem;
+        color:$secondary-color;
+        @include fadeUp;
+    }
+}
+// section 3
+.why__wrap{
+    padding:0;
+    @include for-desktop{
+        border-bottom:1px solid $color-E6E6E6;
+        padding-bottom:27.6rem;
+    }
+    :global(.section__inner){
+        flex-direction:row;
+        gap:10rem;
+    }
+    @include for-ipad{
+        height:500px;
+        margin:10rem 0;        
+    }
+    @include for-mobile{
+        height:100%;
+    }
+}
+.learnmorebtn{
+    margin-top:4rem;
+    font-weight:700;
+    font-size:1.8rem;
+    padding:0.2rem;
+    @include fadeUp;
+    animation-delay:1s;
+}
+.rightarrow{
+    height:1.17rem;
+    background-image:url('../public/images/Arrow_icon.svg');
+    margin-left:2rem;
+    @include widthInc;
+    animation-delay:1.5s;
+}
+.imgblock{
+    position:relative;
+}
+.rankproject{
+    width:85.5rem;
+    height:69.5rem;
+    background-image:url('../public/images/Why_Illustration-1.svg');
+    @include fadeUp;
+    @include for-mobile{
+        display:none;
+    }
+}
+.topearn{
+    width:64.7rem;
+    height:74.0rem;
+    background-image:url('../public/images/Why_Illustration-2.svg');
+    @include position(absolute, $right:-5rem, $top:30rem);
+    @include fadeUp;
+    animation-delay:1s;
+    @include for-mobile{
+        display:none;
+    }
+}
+.rectangle{
+    width:100rem;
+    height:85rem;
+    background-image:url('../public/images/Why_Shapes_Rectangle.svg');
+    @include slideRightStick;
+    @include position(absolute, $left:0, $bottom:40rem);
+    @include for-mobile{
+        display:none;
+    }
+}
+.circle{
+    width:90rem;
+    height:90rem;
+    background-image:url('../public/images/Why_Shapes_Ellipse.svg');
+    @include slideRightCircle;
+    @include position(absolute, $left:0, $bottom:-15rem);
+    animation-delay:.5s;
+    @include for-ipad{
+        width:60rem;
+        height:60rem;
+        bottom:-6rem;
+    }
+    @include for-mobile{
+        display:none;
+    }
+}
+// section 4
+.work{
+    @include for-ipad{
+        height:100%;
+        padding:10rem 10%;
+    }
+    @include for-mobile{
+        height:100%;
+        padding:10rem 5%;
+    }
+}
+.workdonetext{
+    color:$primary-color;
+    font-size:2.7rem;
+    line-height:3.5rem;
+    width:55.2rem;
+    text-align:center;
+    margin-top:4rem;
+    ~ .form__custom{
+        margin:7rem 0 0;
+        width:66.61rem;
+        @include fadeUp;
+    }
+}
+.triangle{
+    background-image:url('../public/images/Signup_Shape.svg');
+    width:9rem;
+    height:33rem;
+    @include slideLeft;
+    animation-delay:3s;
+    @include position(absolute, $bottom:0);
+    @include for-mobile{
+        display:none;
+    }
+}

@@ -1,0 +1,116 @@
+@mixin for-desktop{
+    @media (min-width:996px){
+        @content;
+    }
+}
+@mixin for-ipad{
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        @content;
+    }
+}
+@mixin for-mobile{
+    @media (max-width:767px){
+        @content;
+    }
+}
+@mixin position($position, $top:null, $right:null, $bottom:null, $left:null) {
+    position:$position;
+    bottom:$bottom;
+    right:$right;
+    left:$left;
+    top:$top;
+}
+@mixin transition($transition...){
+    -webkit-transition:$transition;
+    -moz-transition:$transition;
+    -o-transition:$transition;
+    transition:$transition;
+}
+@mixin border-radius($top-left:null, $top-right:null, $bottom-right:null, $bottom-left:null){
+    -webkit-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    -ms-border-radius:$top-left $top-right $bottom-right $bottom-left;
+    border-radius:$top-left $top-right $bottom-right $bottom-left;  
+  }
+@mixin box-shadow($x-axis:0, $y-axis:1px, $blur:2px, $color:$default) {
+    box-shadow:$x-axis $y-axis $blur $color;
+}
+@mixin widthInc{
+    animation-name:widthIncrease;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin fadeIn{
+    animation-name:fade_In;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin fadeUp{
+    animation-name:fade_Up;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin slideLeftTopBlue{
+    animation-name:slide_Left_Top_Blue;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin slideLeftTopYellow{
+    animation-name:slide_Left_Top_Yellow;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    animation-delay:.5s;
+}
+@mixin slideLeftTopBlack{
+    animation-name:slide_Left_Top_Black;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    animation-delay:1s;
+}
+@mixin slideLeft{
+    animation-name:slide_Left;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin slideRightStick{
+    animation-name:slide_RightStick;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin slideRightCircle{
+    animation-name:slide_RightCircle;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin rotate2{
+    animation-name:rotate2;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@mixin rotate4{
+    animation-name:rotate4;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}

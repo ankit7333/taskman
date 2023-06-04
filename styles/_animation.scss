@@ -1,0 +1,149 @@
+@keyframes fade_In{
+      from{
+            opacity:0;
+      }
+      to{
+            opacity:1;
+      }
+}
+@keyframes rotate2{
+      0%{
+            opacity:0;
+      }
+      50%{
+            opacity:1;
+      }
+      100%{
+            transform:rotate3d(0, 0, 1, 6deg);
+      }
+}
+@keyframes rotate4{
+      0%{
+            opacity:0;
+      }
+      50%{
+            opacity:1; 
+      }
+      100%{
+            transform:rotate3d(0, 0, 1, 5deg);
+      }
+}
+@keyframes fade_Up{
+      from{
+            opacity:0;
+            transform:translate3d(0, 100%, 0);
+      }
+      to{
+            opacity:1;
+            transform:translate3d(0, 0, 0);
+      }
+}
+@keyframes slide_Left_Top_Blue{
+      from{
+            opacity:0;
+            transform:translate(150rem, -80rem);
+      }
+      to{
+            opacity:1;
+            transform:translate(56rem, -52rem);
+      }
+}
+@keyframes slide_Left_Top_Yellow{
+      from{
+            opacity:0;
+            transform:translate(150rem, -80rem);
+      }
+      to{
+            opacity:1;
+            transform:translate(74rem, -52rem);
+      }
+}
+@keyframes slide_Left_Top_Black{
+      from{
+            opacity:0;
+            transform:translate(150rem, -80rem);
+      }
+      to{
+            opacity:1;
+            transform:translate(106rem, -45rem);
+      }
+}
+@keyframes slide_Left{
+      from{
+            opacity:0;
+            transform:scaleX(-1) translateX(-172rem);
+      }
+      to{
+            opacity:1;
+            transform:scaleX(-1) translateX(-161.8rem);
+      }
+}
+@keyframes slide_RightStick{
+      from{
+            opacity:0;
+            transform:scaleX(-1) translate(100rem, 10rem);
+      }
+      to{
+            opacity:1;
+            transform:scaleX(-1) translate(50rem, 15rem);
+      }
+}
+@keyframes slide_RightCircle{
+      from{
+            opacity:0;
+            transform:translate(-100rem, 10rem);
+      }
+      to{
+            opacity:1;
+            transform:translate(-58rem, 10rem);
+      }
+}
+@keyframes widthIncrease{
+      from{
+            width:0rem;
+      }
+      to{
+            width:2.64rem;
+      }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+      @keyframes slide_RightCircle{
+            from{
+                  opacity:0;
+                  transform:translate(-100rem, 10rem);
+            }
+            to{
+                  opacity:1;
+                  transform:translate(-35rem, 1rem);
+            }
+      } 
+}
+@media screen and (max-width:767px) {
+      @keyframes slide_Left_Top_Blue{
+            from{
+                  opacity:0;
+                  transform:translate(150rem, -90rem);
+            }
+            to{
+                  transform:translate(73rem, -91rem);
+            }
+      }
+      @keyframes slide_Left_Top_Yellow{
+            from{
+                  opacity:0;
+                  transform:translate(150rem, -90rem);
+            }
+            to{
+                  transform:translate(93rem, -89rem);
+            }
+      }
+      @keyframes slide_Left_Top_Black{
+            from{
+                  opacity:0;
+                  transform:translate(150rem, -90rem);
+            }
+            to{
+                  transform:translate(115rem, -80rem);
+            }
+      }
+  }

@@ -1,0 +1,21 @@
+@use '../../styles/index.scss' as *;
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:7rem;
+    width:100%;
+    left:0;
+    :global(.button__secondary){
+        height:5.8rem;
+        width:14.5rem;
+        font-size:2rem;
+    }
+}
+.logo{
+    color:$primary-color;
+    font-family:$rubik;
+    font-weight:700;
+    font-size:3rem;
+}
